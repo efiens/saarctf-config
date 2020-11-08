@@ -2,46 +2,49 @@
     "databases": {
         "postgres": {
             "__comment": "Leave server empty to use local socket",
-            "server": "",
+            "server": "10.32.250.2",
             "port": 5432,
-            "username": "",
-            "password": "",
-            "database": "saarctf_2"
+            "username": "saarctf",
+            "password": "saarctf",
+            "database": "saarctf"
         },
         "redis": {
-            "host": "localhost",
+            "host": "10.32.250.2",
             "port": 6379,
-            "db": 3
+            "db": 0,
+            "password": "saarctf"
         },
         "rabbitmq": {
-            "host": "localhost",
+            "host": "10.32.250.2",
             "port": 5672,
             "vhost": "saarctf",
             "username": "saarctf",
-            "password": "123456789"
+            "password": "saarctf"
         },
-        "website": "sqlite:///../../saarctf-webpage/db.sqlite3"
+        "website": "sqlite:////opt/config/2020/webpage-db.sqlite3"
     },
-    "scoreboard_path": "/dev/shm/scoreboard",
+    "scoreboard_path": "/var/www/scoreboard",
     "checker_packages_path": "/dev/shm/packages",
-    "logo_input_path": "...",
-    "flower_url": "http://localhost:5555/",
-    "coder_url": "",
-    "scoreboard_url": "",
-    "grafana_url": "",
-    "secret_flags": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "logo_input_path": "/opt/config/logo.png",
+    "flower_url": "10.32.250.2:8443/",
+    "flower_internal_url": "http://127.0.0.1:20000/",
+    "flower_ajax_url": "/flower/",
+    "coder_url": "10.32.250.2:8444/",
+    "grafana_url": "10.32.250.2:8445/",
+    "scoreboard_url": "10.32.250.2/",
+    "secret_flags": "0000000000000000000000000000000000000000000000000000000000000000",
     "flags_rounds_valid": 10,
-    "external_timer": false,
+    "external_timer": true,
     "nop_team_id": 1,
     "dispatcher_check_vpn_status": true,
     "network": {
         "game": "10.32.0.0/16",
         "__ip_syntax": ["number", "or list", ["a", "b", "c"], "= ((team_id / a) mod b) + c"],
-        "vulnbox_ip": [127, [200, 256, 0], [1, 200, 0], 2],
-        "gateway_ip": [127, [200, 256, 0], [1, 200, 0], 1],
-        "testbox_ip": [127, [200, 256, 0], [1, 200, 0], 3],
+        "vulnbox_ip": [10, [200, 256, 32], [1, 200, 0], 2],
+        "gateway_ip": [10, [200, 256, 32], [1, 200, 0], 1],
+        "testbox_ip": [10, [200, 256, 32], [1, 200, 0], 3],
         "__range_syntax": ["number", "or list", ["a", "b", "c"], "= ((team_id / a) mod b) + c", "/range"],
-        "team_range": [127, [200, 256, 0], [1, 200, 0], 0, 24],
+        "team_range": [10, [200, 256, 32], [1, 200, 0], 0, 24],
         "vpn_host": "10.32.250.1",
         "vpn_peer_ips": [10, [200, 256, 48], [1, 200, 0], 1],
         "gameserver_ip": "10.32.250.2"
