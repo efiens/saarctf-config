@@ -32,7 +32,7 @@
     "flower_internal_url": "http://127.0.0.1:20000",
     "flower_ajax_url": "/flower/",
     "coder_url": "http://10.32.250.2:8082",
-    "grafana_url": "http://10.32.250.2:8445",
+    "grafana_url": "http://10.32.250.2:3000",
     
 
     "secret_flags": "0000000000000000000000000000000000000000000000000000000000000000",
