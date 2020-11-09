@@ -26,12 +26,15 @@
     "scoreboard_path": "/var/www/scoreboard",
     "checker_packages_path": "/dev/shm/packages",
     "logo_input_path": "/opt/config/logo.png",
-    "flower_url": "10.32.250.2:8443/",
-    "flower_internal_url": "http://127.0.0.1:20000/",
+
+    "scoreboard_url": "http://10.32.250.2",
+    "flower_url": "http://10.32.250.2:8081",
+    "flower_internal_url": "http://127.0.0.1:20000",
     "flower_ajax_url": "/flower/",
-    "coder_url": "10.32.250.2:8444/",
-    "grafana_url": "10.32.250.2:8445/",
-    "scoreboard_url": "10.32.250.2/",
+    "coder_url": "http://10.32.250.2:8082",
+    "grafana_url": "http://10.32.250.2:8445",
+    
+
     "secret_flags": "0000000000000000000000000000000000000000000000000000000000000000",
     "flags_rounds_valid": 10,
     "external_timer": true,
